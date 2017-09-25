@@ -26,7 +26,7 @@ int main()
       acceptor.accept(socket);
 
       std::string message = make_daytime_string();
-
+      std::cout<< "Client connected!" <<std::endl;
       boost::system::error_code ignored_error;
       boost::asio::write(socket, boost::asio::buffer(message), ignored_error);
     }
